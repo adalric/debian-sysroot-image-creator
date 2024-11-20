@@ -55,6 +55,7 @@ TRIPLES = {
     "arm64": "aarch64-linux-gnu",
     "mipsel": "mipsel-linux-gnu",
     "mips64el": "mips64el-linux-gnuabi64",
+    "ppc64el": "powerpc64le-linux-gnu",
 }
 
 REQUIRED_TOOLS = [
@@ -591,6 +592,15 @@ DEBIAN_PACKAGES_ARCH = {
     ],
     "mipsel": [],
     "mips64el": [
+        "valgrind",
+    ],
+    "ppc64el": [
+        "libasan6",
+        "libitm1",
+        "liblsan0",
+        "libthai0",
+        "libtsan0",
+        "libubsan1",
         "valgrind",
     ],
 }
